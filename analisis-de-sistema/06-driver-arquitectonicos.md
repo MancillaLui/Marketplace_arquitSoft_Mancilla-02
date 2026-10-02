@@ -1,9 +1,14 @@
-# Restricciones
+### Nuevo Driver Arquitectónico
+| ID | Driver arquitectónico | Origen | ¿Por qué influye? |
+| :--- | :--- | :--- | :--- |
+| **DA06** | El sistema debe permitir modificar funcionalidades sin afectar innecesariamente otros módulos. | AC05-Mantenibilidad | Influye en la separación de responsabilidades, modularidad y dependencias internas. |
 
-| ID | Restricción | Descripción |
+### Resumen de Drivers Priorizados
+| Driver | Problema que plantea | Decisión que responde |
 | :--- | :--- | :--- |
-| **RC01** | Aplicación web | El sistema debe desarrollarse como una aplicación accesible mediante un navegador web. |
-| **RC02** | Control de versiones | El código fuente debe gestionarse utilizando Git y mantenerse en un repositorio compartido en GitHub. |
-| **RC03** | API REST | La comunicación entre el frontend y los servicios del sistema debe realizarse mediante una API REST. |
-| **RC04** | Pasarela de pago | El sistema debe integrarse con una pasarela de pago externa para procesar las operaciones de pago. |
-| **RC05** | Servicio de envío | El sistema debe integrarse con un servicio externo de envío para gestionar la información relacionada con la entrega de pedidos. |
+| **DA01-Escalabilidad** | Aumentarán usuarios en campañas | Monolito modular con posibilidad de escalamiento horizontal |
+| **DA02-Rendimiento** | Habrá alta concurrencia | Incorporar caché y optimizar comunicación/procesamiento |
+| **DA03-Seguridad** | Hay datos sensibles | Autenticación y autorización |
+| **DA04-Pago externo** | Hay que comunicarse con una pasarela | Integración mediante API y adaptadores |
+| **DA05-API REST** | Frontend/backend deben comunicarse mediante REST | Separar interfaz y backend mediante API REST |
+| **DA06-Mantenibilidad** | Cambios no deben afectar otros módulos | Modularidad + Clean Architecture |
